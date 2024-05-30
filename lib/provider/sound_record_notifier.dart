@@ -107,8 +107,9 @@ class SoundRecordNotifier extends ChangeNotifier {
         String path = mPath;
         String _time = minute.toString() + ":" + second.toString();
         sendRequestFunction(File.fromUri(Uri(path: path)), _time);
-        stopRecording!(_time);
+		//stopRecording!(_time);	        
       }
+      stopRecording!(_time); //Still need this to run
     }
     resetEdgePadding();
   }
